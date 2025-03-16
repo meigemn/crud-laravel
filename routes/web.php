@@ -13,3 +13,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('clients', App\Http\Controllers\ClientController::class);
 Route::resource('orders', App\Http\Controllers\OrderController::class);
+use App\Http\Controllers\ClientController;
+
+// Ruta para mostrar el índice de clientes
+Route::get('/clientes', [ClientController::class, 'index'])->name('client.index');
