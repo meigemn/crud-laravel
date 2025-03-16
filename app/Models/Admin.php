@@ -8,8 +8,6 @@ class Admin extends Authenticatable
 {
     use Notifiable;
 
-    protected $table = 'admins'; // Especifica el nombre de la tabla
-
     protected $fillable = [
         'name',
         'email',
