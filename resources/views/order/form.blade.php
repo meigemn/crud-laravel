@@ -1,10 +1,16 @@
+{{-- no funciona el cursor pointer con bootstrap a no ser que sea un boton, no sé por qué --}}
+<style>
+    .client-selector select:hover {
+        cursor: pointer;
+    }
+</style>
 <div class="row padding-1 p-1">
     <div class="col-md-12">
         {{-- id cliente --}}
-        <div class="client-selector">
+        <div class="client-selector ">
             <label for="clientSelect">Selecciona un Cliente</label>
             <select class="form-control" id="clientSelect" name="client_id">
-                @foreach($clients as $id )
+                @foreach($clients as $id)
                     <option value="{{ $id }}">{{ $id }}</option>
                 @endforeach
             </select>
