@@ -57,12 +57,16 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id): View
-    {
-        $order = Order::find($id);
+  /**
+ * Show the form for editing the specified resource.
+ */
+public function edit($id): View
+{
+    $order = Order::find($id); // Obtén la orden que se va a editar
+    $clients = Client::pluck('id', 'name'); // Obtén la lista de clientes
 
-        return view('order.edit', compact('order'));
-    }
+    return view('order.edit', compact('order', 'clients')); // Pasa ambas variables a la vista
+}
 
     /**
      * Update the specified resource in storage.
