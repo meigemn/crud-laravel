@@ -4,8 +4,8 @@
         <div class="client-selector">
             <label for="clientSelect">Selecciona un Cliente</label>
             <select class="form-control" id="clientSelect" name="client_id">
-                @foreach($clients as $id => $name)
-                    <option value="{{ $id }}">{{ $name }}</option>
+                @foreach($clients as $id )
+                    <option value="{{ $id }}">{{ $id }}</option>
                 @endforeach
             </select>
         </div>
